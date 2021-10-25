@@ -12,9 +12,7 @@ class App extends React.Component {
       name : "Ryan"
     };
   }
-  // updateStateMessage = (e)=> {
-  //   this.setState({welcomeMessage:e.target.value});
-  // }
+
   handleChangeFunction = (e)=> {
     this.setState({message : e.target.value});
   }
