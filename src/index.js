@@ -12,12 +12,19 @@ class App extends React.Component {
       name : "Ryan"
     };
   }
+  // updateStateMessage = (e)=> {
+  //   this.setState({welcomeMessage:e.target.value});
+  // }
+  handleChangeFunction = (e)=> {
+    this.setState({message : e.target.value});
+  }
   
   render() {
     return (
       <div>
         <Message propsMessage={this.state.message}/>
         <Name propsMessage={this.state.name}/>
+        <input onChange={this.handleChangeFunction}/>
       </div>
     );
   }
