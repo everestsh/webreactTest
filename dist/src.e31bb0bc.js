@@ -29772,12 +29772,52 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"index.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"Component/MessageComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Message = function Message(props) {
+  return /*#__PURE__*/_react.default.createElement("h1", null, props.propsMessage);
+};
+
+var _default = Message;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"Component/NameComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Name = function Name(props) {
+  return /*#__PURE__*/_react.default.createElement("h4", null, "My name is ", props.propsMessage);
+};
+
+var _default = Name;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");
+
+var _MessageComponent = _interopRequireDefault(require("./Component/MessageComponent"));
+
+var _NameComponent = _interopRequireDefault(require("./Component/NameComponent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29814,14 +29854,21 @@ var App = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, App);
 
     _this = _super.call(this);
-    _this.state = {};
+    _this.state = {
+      message: "Hello form props",
+      name: "Ryan"
+    };
     return _this;
   }
 
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hello CodeSandbox"));
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_MessageComponent.default, {
+        propsMessage: this.state.message
+      }), /*#__PURE__*/_react.default.createElement(_NameComponent.default, {
+        propsMessage: this.state.name
+      }));
     }
   }]);
 
@@ -29834,7 +29881,7 @@ var rootElement = document.getElementById("root");
 //
 // React.createElement(App), 
 _react.default.createElement(App, null), rootElement);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./Component/MessageComponent":"Component/MessageComponent.js","./Component/NameComponent":"Component/NameComponent.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
