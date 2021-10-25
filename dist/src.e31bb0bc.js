@@ -29662,10 +29662,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       name: "Ryan"
     };
     return _this;
-  } // updateStateMessage = (e)=> {
-  //   this.setState({welcomeMessage:e.target.value});
-  // }
-
+  }
 
   _createClass(App, [{
     key: "render",
