@@ -1,28 +1,33 @@
-import React  from 'react'
+import React, { Component } from "react";
 import { render } from 'react-dom'
-import Message from  './Component/MessageComponent'
-import Name from  './Component/NameComponent'
-
-
-class App extends React.Component {
+import {people} from './u3/w3.2/people'
+// console.log("people:  === ", people)
+class App extends Component {
   constructor() {
+    console.log("constructor Invoked!" )
     super();
     this.state = {
-      message: "Hello form props",
-      name : "Ryan"
-    };
+      friends: people
+    }
   }
-
-  handleChangeFunction = (e)=> {
-    this.setState({message : e.target.value});
+  componentDidMount(){
+    console.log("CDM Invoked!" )
+    this.setState({friends:people})
   }
   
   render() {
+    console.log("Render Invoked ")
     return (
-      <div>
-        <Message propsMessage={this.state.message}/>
-        <Name propsMessage={this.state.name}/>
-        <input onChange={this.handleChangeFunction}/>
+      <div className="container">
+        <h1> Welcome to Friends! </h1>
+        {/* <p>
+          The purpose of this follow along assignment is to give you access to
+          more 'at bats' with ReactJS and to talk about the pieces of the{" "}
+          <strong>React Component LifeCycle</strong> along the way.
+        </p> */}
+        {this.state.friends.map(friend => ( 
+        <div key={friend.id}> {friend.first_name} </div>
+        ))}
       </div>
     );
   }
