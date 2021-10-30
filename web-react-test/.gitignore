@@ -29,6 +29,11 @@ yarn-error.log*
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+*.exe
+*.o 
+
+#linux
+a.out
 
 # Python:
 *.py[cod]
@@ -37,3 +42,8 @@ Desktop.ini
 *.egg-info
 dist
 build
+
+# My configurations:
+db.ini
+deploy_key_rsa
+.vscode
