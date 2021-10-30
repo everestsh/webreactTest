@@ -10,4 +10,15 @@ npm start
 
 Server running at http://localhost:1234
 
+
+
+```
+
+
+```
+##del git cached
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+
 ```
