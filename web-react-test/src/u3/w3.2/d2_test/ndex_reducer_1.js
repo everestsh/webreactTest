@@ -1,29 +1,16 @@
 import React from "react";
 import ReactDOM from 'react-dom'
 import { createStore } from "redux"
-import {Provider, connect} from "react-redux"
+import {Provider} from "react-redux"
 
-
+const store = createStore(reducer)
 
 
 function reducer(){
   return {
-      user: {
-        name: 'Dustin'
-      },
-      movies: [
-        'Star Wars',
-        'Lord of the Rings',
-        'Harry Potter'
-      ],
-      todoList: [
-        { task: 'Learn Redux', id: 0, completed: false }
-      ],
-      moviesToWatch: 13
-    }
-  
+    title: "Hello world! I'am in the Redux store!"
+  }
 }
-const store = createStore(reducer)
 
 function App(){
   return (
