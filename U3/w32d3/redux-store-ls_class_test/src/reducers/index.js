@@ -1,9 +1,13 @@
 
 
-export default function reducer() {
-    return {
-      title: 'Title from Redux store'
-    };
-  }
+const initialState = {
+    title: 'Title from Redux store'
+  };
 
-//   export default reducer
+ function reducer(state = initialState, action) {
+    console.log("reducer ",state)
+    return state;
+
+}
+export default reducer;
+
