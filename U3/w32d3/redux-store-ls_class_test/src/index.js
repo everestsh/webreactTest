@@ -7,12 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-function reducer() {
-  return {
-    title: 'Title from Redux store'
-  };
-}
-
+import reducer from './reducers';
 const store = createStore(reducer)
 
 ReactDOM.render(
