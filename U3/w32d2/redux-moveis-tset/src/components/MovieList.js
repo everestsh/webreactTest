@@ -1,20 +1,28 @@
 import Movie from "./Movie";
 import {connect} from  'react-redux'
+import {addMovie} from '../actions'
+import { render } from "react-dom";
+import React , { Component } from "react";
+  
+class  MovieList extends Component {
 
-const MovieList = (props) => {
-    console.log("MovieList = ",props)
-    return (
-      <div>
-        <h2>User: {props.user.name}</h2>
-        <p>Movies to watch: {props.moviesToWatch}</p>
-        {
-            props.movies.map((movie, key) => (
-                <Movie key={key.index} movie={movie}/>
-            ))
-        }
-      </div>
-    );
-  }
+
+    render(){
+        console.log("MovieList = ",this.props)
+        return (
+        <div>
+            <h2>User: {this.props.user.name}</h2>
+            <p>Movies to watch: {this.props.moviesToWatch}</p>
+            {
+                this.props.movies.map((movie, key) => (
+                    <Movie key={key.index} movie={movie}/>
+                ))
+            }
+        </div>
+        );
+    }
+
+}
   const mapStateToProps = state => {
       return {
         movies: state.movies,
@@ -22,5 +30,8 @@ const MovieList = (props) => {
         user: state.user
       }
   }
+
 //   export default connect(null, {})(MovieList);
-export default connect(mapStateToProps, {})(MovieList);
+export default connect(
+    mapStateToProps, 
+    {addMovie})(MovieList);
