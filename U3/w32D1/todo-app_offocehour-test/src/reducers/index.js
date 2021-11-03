@@ -30,7 +30,7 @@ const reducer = (state, action) => {
           ...state.todos,
           {
             title: action.payload,
-            id: Date.now(),
+            id: Date.now()+'',
             done: false
           }
         ]
