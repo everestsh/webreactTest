@@ -5,10 +5,18 @@ import { render } from "react-dom";
 import React , { Component } from "react";
   
 class  MovieList extends Component {
+    state = {
+        newMovie: ''
+    };
+    addMovie = e => {
+        e.preventDefault();
+        this.props.addMovie(this.state.newMovie)
+    }
 
-
+    handleChanges = e => this.setState({newMovie: e.target.value})
     render(){
-        console.log("MovieList = ",this.props)
+        console.log("MovieList this.props= ",this.props)
+        console.log("MovieList this.props= ",this.state)
         return (
         <div>
             <h2>User: {this.props.user.name}</h2>
@@ -18,6 +26,11 @@ class  MovieList extends Component {
                     <Movie key={key.index} movie={movie}/>
                 ))
             }
+            <input 
+            onClick={this.handleChanges}
+            value={this.state.newMovie}
+            />
+            <button onClick={this.addMovie}>Add Movie</button>
         </div>
         );
     }
