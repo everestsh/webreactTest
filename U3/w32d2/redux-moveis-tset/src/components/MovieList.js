@@ -7,11 +7,11 @@ const MovieList = (props) => {
       <div>
         <h2>User: {props.user.name}</h2>
         <p>Movies to watch: {props.moviesToWatch}</p>
-        {/* {
-            props.movies.map(movie => (
-                <Movie movie={movie}/>
+        {
+            props.movies.map((movie, key) => (
+                <Movie key={key.index} movie={movie}/>
             ))
-        } */}
+        }
       </div>
     );
   }
