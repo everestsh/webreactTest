@@ -1,7 +1,6 @@
 import Movie from "./Movie";
 import {connect} from  'react-redux'
 import {addMovie} from '../actions'
-import { render } from "react-dom";
 import React , { Component } from "react";
   
 class  MovieList extends Component {
@@ -29,7 +28,7 @@ class  MovieList extends Component {
             <input 
             onChange={this.handleChanges}
             value={this.state.newMovie}
-            />
+            /> 
             <button onClick={this.addMovie}>Add Movie</button>
         </div>
         );
