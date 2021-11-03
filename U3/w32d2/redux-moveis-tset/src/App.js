@@ -1,10 +1,12 @@
 
 import './App.css';
+import MovieList from './components/MovieList'
 
 function App() {
   return (
     <div className="App">
-       <h1>test</h1>
+       <h1>Redux Maovies</h1>
+       <MovieList/>
     </div>
   );
 }
