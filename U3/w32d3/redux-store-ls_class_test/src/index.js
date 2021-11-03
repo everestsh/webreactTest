@@ -7,12 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const reducer = (state , action) => {
-  switch (action.type){
-  
-      default:
-          return state
-  }
+function reducer() {
+  return {
+    title: 'Title from Redux store'
+  };
 }
 
 const store = createStore(reducer)
