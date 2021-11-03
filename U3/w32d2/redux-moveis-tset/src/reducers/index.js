@@ -19,14 +19,15 @@ const initialState = {
 
 
 // export const reducer = (state = initialState, action) => {
-  export const reducer = (state, action) => {
+  const reducer = (state, action) => {
     switch (action.type){
-        case ADD_MOVIE:
-            return  {
-                ...state,
-                movies: [...state.movies, action.payload]
-            }
+        // case ADD_MOVIE:
+        //     return  {
+        //         ...state,
+        //         movies: [...state.movies, action.payload]
+        //     }
         default:
             return state
     }
 }
+export default reducer;

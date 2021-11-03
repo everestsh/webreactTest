@@ -6,17 +6,17 @@ import reportWebVitals from './reportWebVitals';
 
 import { createStore } from 'redux';
 import { Provider} from 'react-redux';
-// import reducer from './reducers';
+import reducer from './reducers';
 
 
 
-const reducer = (state , action) => {
-  switch (action.type){
+// const reducer = (state , action) => {
+//   switch (action.type){
   
-      default:
-          return state
-  }
-}
+//       default:
+//           return state
+//   }
+// }
 const store = createStore(reducer)
 ReactDOM.render(
   
