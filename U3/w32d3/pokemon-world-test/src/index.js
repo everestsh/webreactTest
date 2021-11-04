@@ -6,18 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import reducer from './reducers';
 
 
 
-const initialState = {
-  title: 'Title from Redux store'
-};
 
-function reducer(state = initialState, action) {
-  console.log("reducer ",state)
-  return state;
-
-}
 const store = createStore(reducer)
 ReactDOM.render(
   <React.StrictMode>
