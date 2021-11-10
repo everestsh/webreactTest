@@ -11,4 +11,4 @@ document.getElementById('root').innerHTML = `
 function defaultParam(theParam = 'foo') {
     return theParam
   }
-  console.log(defaultParam('bar'))
+  console.log(defaultParam())
