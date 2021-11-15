@@ -18,7 +18,7 @@ class App extends React.Component {
       putError: '',
       deleteSuccessMessage: '',
       deleteError: '',
-      showForm: 'put'
+      showForm: 'delete'
     };
   }
 
@@ -67,6 +67,29 @@ class App extends React.Component {
       })
   };
 
+  deleteMessage = quote => {
+    // https://lambda-school-test-apis.herokuapp.com is the base url for the server
+    // Make a DELETE request using axios to the endpoint /quote/:id, where :id is the
+    // .   id of whatever quote you are trying to delete. For now this will just be
+    // .   an arbitrary, hardcoded number.
+    axios.delete(`https://lambda-school-test-apis.herokuapp.com/quotes/${quote.id}`)
+      .then(resp=>{
+        console.log("deleteMessage resp=", resp)
+        this.setState({
+          deleteError:'',
+          deleteSuccessMessage: resp.data.successMessage
+        })
+      })
+      .catch(err=>{ 
+        console.log(err)
+        this.setState({
+          deleteError: `${err.response.status} ${err.response.statusText}`,
+          deleteSuccessMessage: ''
+        })
+      })
+  };
+
+
   changeTabs = tab => {
     this.setState({
       showForm: tab,
@@ -78,6 +101,8 @@ class App extends React.Component {
       deleteError: ''
     });
   };
+
+
 
   render() {
     return (
@@ -114,8 +139,12 @@ class App extends React.Component {
         )}
         {this.state.showForm === 'put' && <PutMovieQuoteForm 
                                           putMessage={this.putMessage}
-                                          postSuccessMessage={this.postSuccessMessage} />}
-        {this.state.showForm === 'delete' && <DeleteMovieQuoteForm />}
+                                          putSuccessMessage={this.postSuccessMessage} 
+                                          putError={this.state.putError} />}
+        {this.state.showForm === 'delete' && <DeleteMovieQuoteForm 
+                                          deleteMessage={this.deleteMessage} 
+                                          deleteSuccessMessage={this.deleteSuccessMessage}
+                                          deleteError={this.deleteError}/>}
       </div>
     );
   }
