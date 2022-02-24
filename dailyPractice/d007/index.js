@@ -8,6 +8,8 @@ console.log("a1=2 ", a1==a2)
 var b1 = 123456
 var b2 = "123456"
 console.log("b1=b2 ", b1==b2)
+
+
 setTimeout(() => {
     console.log('hello')
 }, 5 );
