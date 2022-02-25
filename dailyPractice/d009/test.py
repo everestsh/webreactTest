@@ -22,6 +22,12 @@ w=4
 h=5
 print("width =", w, "height =", h, " area =", area(w,h))
 
+def printme(str):
+    print(str)
+    return
+printme("我要调用用户自定义函数!")
+printme("再次调用同一函数")
+
 print('------------end------------')
 
 
