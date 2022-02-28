@@ -22,6 +22,10 @@ print("decode", b'\xe4\xb8\xad\xff'.decode('utf-8', errors='ignore'))
 
 print("计算:", len('ABC'))
 print("计算:", len('中文'))
+
+print("计算:", len(b'\xe4\xb8\xad\xe6\x96\x87'))
+print("计算:", len('中文'.encode('utf-8')))
+print("计算:", len('中文'))
 print('------------end------------')
 #Python的浮点数也没有大小限制，但是超出一定范围就直接表示为inf（无限大）
 
