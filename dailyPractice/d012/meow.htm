@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple ES6 Generator Example</title>
+<style>
+  body{margin:1em auto;max-width:800px;background-color:white;font-size:28px;font-family:serif;}
+  blockquote{position:relative;padding:15px 15px;margin:2em 0px 1em;border:10px solid #5A8F00;min-height:4.5em;line-height:4em;text-align:center;color:#333;background:#FFF none repeat scroll 0% 0%;border-radius:20px;}
+  blockquote::before,blockquote::after{display:block;content:"";position:absolute;z-index:10;bottom:-40px;left:50px;height:30px;border-style:solid;border-width:0px 10px 10px 0px;border-color:#5A8F00;background:transparent none repeat scroll 0% 0%;}
+  blockquote::before{width:50px;border-bottom-right-radius:80px 50px;}
+  blockquote::after{width:20px;border-bottom-right-radius:40px 50px;}
+  blockquote > p::before {content:"";position:absolute;bottom:-40px;left:45px;width:10px;height:10px;background:#5A8F00 none repeat scroll 0% 0%;border-radius:10px;}
+  blockquote > p::after {content:"";position:absolute;bottom:-10px;left:76px;width:24px;height:15px;background:#FFF none repeat scroll 0% 0%;}
+  .pre-script{display:block;font-family:monospace;white-space:pre;margin:1em;padding:1em;border:1px solid #CCC;font-size:14px;}
+  span{font-size:50px;}
+  button{font-size:30px;padding:5px 15px;}
+</style>
+</head>
+<body>
+From: <a href="https://people-mozilla.org/~jorendorff/demos/meow.html">https://people-mozilla.org/~jorendorff/demos/meow.html</a>
+<blockquote><p>Hi~</p></blockquote>
+<span>😺</span>
+<button onclick="talk()" type="button"> push to talk </button>
+<script>
+  // Code to drive the quips() generator. Sorry for how clumsy this is! :)
+  var meow_iter, chat = document.getElementsByTagName('p')[0];
+  function talk () {
+    meow_iter = meow_iter || quips("Xingu");
+    var result = meow_iter.next();
+    // The generator yielded a value. Display it.
+    chat.innerHTML = result.done ? '88...' :result.value;
+  };
+</script>
+<script class="pre-script" >
+  function* quips(name) {
+    yield "hello " + name + "!";
+    yield "i hope you are enjoying the blog posts";
+    if (name.toLowerCase().startsWith("x")) {
+      yield "hey, it's cool how your name starts with an X, " + name;
+    }
+    yield "see you later!";
+  }
+</script>
+</body>
+</html>
