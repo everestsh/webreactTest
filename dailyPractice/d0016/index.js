@@ -65,6 +65,7 @@ arr[1]()
 // }
 // // console.log("let li =", li) //err
 
+
 // step 2
 // const 使用，对物理内存地址不可更改
 const a = {
@@ -75,5 +76,21 @@ a.email = 'sooof@me.com'
 Object.freeze(a)
 a.name = 'leo'
 console.log(a)
+
+
+const someAsyncThing = function() {
+    return new Promise(function(resolve, reject) {
+    // 下面一行会报错，因为x没有声明
+    //   resolve(x + 2);
+    // resolve(2)
+    });
+  };
+  
+  someAsyncThing().then(function() {
+    console.log('everything is great');
+  });
+  
+  setTimeout(() => { console.log(123) }, 2000);
+
 console.log("--------------------------")
 console.log("Test End")
