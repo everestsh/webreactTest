@@ -23,8 +23,50 @@ var s = 'hello, world'
 console.log(s.substring(0, 5)); // 从索引0开始到5（不包括5），返回'hello'
 console.log(s.substring(7)); // 从索引7开始到结束，返回'world'
 
+// getJSON('http://localhost:9000/api/users/1').then(function(post) {
+//     return getJSON(post.commentURL);
+//   }).then(function(comments) {
+//     // some code
+//     console.log(s.indexOf('world'));
+//   }).catch(function(error) {
+//     // 处理前面三个Promise产生的错误
+//     console.log(s.indexOf('world'))
+//   });
+
+// const someAsyncThing = function() {
+//     return new Promise(function(resolve, reject) {
+//       // 下面一行会报错，因为x没有声明
+//     //   resolve(x + 2);
+//       resolve(4);
+//     });
+//   };
+  
+//   someAsyncThing().then(function() {
+//     console.log('everything is great');
+//   });
+  
+//   setTimeout(() => { console.log(123) }, 2000);
+//   // Uncaught (in promise) ReferenceError: x is not defined
+//   // 123
+
+const promise = new Promise(function (resolve, reject) {
+    resolve('ok');
+    // setTimeout(function () { throw new Error('test') }, 0)
+  });
+  promise.then(function (value) { console.log(value) });
+  // ok
+  // Uncaught Error: test
 
 
+Promise.resolve()
+    .catch(function(error) {
+    console.log('oh no', error);
+    })
+    .then(function() {
+    console.log('carry on');
+    });
 
+
+// carry on
 console.log("--------------------------")
 console.log("Test End")
