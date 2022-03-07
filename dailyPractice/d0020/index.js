@@ -59,7 +59,42 @@ var xiaoming = {
 console.log("xiaoming.hasOwnProperty('name') = ", xiaoming.hasOwnProperty('name')); // true
 console.log("xiaoming.hasOwnProperty('toString') = ", xiaoming.hasOwnProperty('toString')); // false
 
+// var age = 20;
+// if (age >= 18) { // 如果age >= 18为true，则执行if语句块
+//     alert('adult');
+// } else { // 否则执行else语句块
+//     alert('teenager');
+// }
 
+// for循环的一个变体是for ... in循环，它可以把一个对象的所有属性依次循环出来：
+var o = {
+  name: 'Jack',
+  age: 20,
+  city: 'Beijing'
+};
+for(var key in o) {
+  if (o.hasOwnProperty(key)) {
+    console.log(key); // 'name', 'age', 'city'
+  }
+}
+
+var a = ['A', 'B', 'C'];
+for (var i in a) {
+    console.log(i); // '0', '1', '2'
+    console.log(a[i]); // 'A', 'B', 'C'
+}
+var x = 0;
+var n = 99;
+while (n > 0) {
+    x = x + n;
+    n = n - 2;
+}
+console.log(x);
+var n = 0;
+do {
+    n = n + 1;
+} while (n < 100);
+console.log(n); // 100
 
 // Promise.all()方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
 // const p = Promise.all([p1, p2, p3]);
