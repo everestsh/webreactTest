@@ -238,7 +238,7 @@ function Task13(s) {
           b.push(arr[i])
           console.log(i)
       }else  {
-        a.push(arr[i])
+        // a.push(arr[i])
         // console.log(i)
       }
       // if(i%2)
@@ -246,6 +246,11 @@ function Task13(s) {
   return b.join("")
 }
 console.log(Task13("abcdefg"))
+
+// U5 W2 P1 Task 1
+function U5W2P1_Task1(p, n, m){
+
+}
 
 console.log("--------------------------")
 console.log("Test End")
