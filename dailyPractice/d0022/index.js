@@ -131,21 +131,121 @@ console.log("--------------------------")
 // }
 
 // Task 6
-function solution(x) {
-  let output = 0 
-  while(x){
-      let i = 0, sum = 1
-      sum = sum * (x +i) 
-      if ( !(x%7) ){
-          output = sum
-          return output
-      }
-  }
-}
-console.log(  !(13%4))
-console.log(7 % 7 === 0)
-console.log(solution(7))
+// function solution(x) {
+//   let output = 1 
+//   let i = 0
+//   if (x%7 === 0) return x
+//   while(x){
+//     console.log("i =", i, "x =", x, "output = ", output)
+//     output = output * (x +i) 
+//       if ( !(output%7) ){
+//           console.log("test")
+//           return output
+//       }
+//       // i += 1
+//       i++
+//   }
+// }
+// // setTimeout("test()","5000");
+// // console.log(  !(13%4))
+// // console.log(7 % 7 === 0)
+// console.log(solution(7))
 
+// Task 7
+// a = [1, 2, 3, 4, 5]
+// // console.log(a.shift())
+// let b = [], output = []
+// b.push(a.shift())
+// // console.log(a)
+// // console.log(b)
+// b.push(a.pop())
+// // console.log(a)
+// // console.log(b)
+// output.push(a)
+// output.push(b)
+// console.log(output)
+
+// P4 Task 8
+// a = [1, 2, 3, 4]
+// a = [1, 2, 3]
+// x = 99
+// // console.log(Math.floor(a.length/2))
+// // a.splice(2, 0, x)
+// a.splice(Math.floor(a.length/2), 0, x)
+// console.log(a)
+
+// function solution(a, x) {
+//   a.splice(Math.floor(a.length/2), 0, x)
+//   return a
+// }
+
+// P4 Task 9
+
+// a = [1, 2, 3]
+// console.log(a.indexOf(20))
+// function solution(a, v) {
+//   return a.indexOf(v) === -1 ?   false : true
+// }
+// P4 Task 10
+
+// a = [1, 2, 3]
+
+// console.log(
+//   a.map( item => {
+//     return item * 2
+//   })
+// )
+
+// function solution(a) {
+//   return a.map( item => {
+//       return item * 2
+//   })
+// }
+
+// P4 Task 11
+
+// a = [0,1,2,3,4,5,6]
+
+// // let sum = a.reduce((p, c)=> p+c, 0)
+// let sum = a.reduce((p, c)=> {
+//   console.log("p =", p, " c =", c)
+//   return p+c
+// }, 0)
+// console.log("sum =", sum)
+
+// P4 Task 12
+
+// console.log(Array(5).fill('A').map((v, k)=>k+1))
+// console.log(Array(5).fill('A'))
+
+// function Task11(n, m) {
+//   arr = []
+//   // arr.push()
+//   // arr.push()
+//   arr = Array(n).fill('A').concat(Array(m).fill('B'))
+//   return arr.join("")
+// }
+// console.log(Task11(3,5))
+
+// P4 Task 13
+function Task13(s) {
+  let arr = [], a = [], b = []
+  if(!s) return ''
+  arr = s.split('')
+  console.log(arr)
+  for(let i =0; i<= arr.length; i++){
+      if(i%2 === 0){
+          b.push(arr[i])
+          console.log(i)
+      }else  {
+        a.push(arr[i])
+        // console.log(i)
+      }
+      // if(i%2)
+  }
+  return b.join("")
+}
+console.log(Task13("abcdefg"))
 
 console.log("--------------------------")
 console.log("Test End")
