@@ -173,5 +173,58 @@ function so(s) {
 }
 console.log(so("ab"))
 
+function sol(s) {
+  let larger = ''
+  let arr = s.split("")
+  console.log(arr)
+  // var max = arr.reduce(function(prev, cur){
+  //     return Math.max(prev, cur)
+  // })
+  arr.forEach(element => {
+    if(element > larger) {
+      larger = element
+      console.log(larger)
+    }
+  });
+  return larger
+}
+console.log("eniac =", sol("eniac"))
+
+// console.log(Array(0).fill('A'))
+
+function solu(n) {
+  return Array(n).fill('A')
+}
+console.log("TEST",solu(5).join(""))
+
+console.log("--------------------------")
+
+function connectDatabase(){
+  return new Promise(function (resolve, reject) {
+    resolve('ok');
+    // setTimeout(function () { throw new Error('test') }, 0)
+  });
+}
+const findAllBooks = ['book']
+const getCurrentUser = ['wendy']
+const databasePromise = connectDatabase();
+function  pickTopRecommendations (b ,u){
+  console.log("I like Book!!!")
+}
+
+const booksPromise = databasePromise
+  .then(findAllBooks);
+
+const userPromise = databasePromise
+  .then(getCurrentUser);
+
+Promise.all([
+  booksPromise,
+  userPromise
+])
+.then(([books, user]) => pickTopRecommendations(books, user));
+
+
+
 console.log("--------------------------")
 console.log("Test End")

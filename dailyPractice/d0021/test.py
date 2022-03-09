@@ -28,4 +28,25 @@ def solution(inputString):
     return inputString[::-1] == inputString
 
 print(solution("aabaa"))
+
+print('---------------------------')
+
+# def s1(n):
+#     total = 1
+#     for x in range(2,n):
+#         total = total * (x+1)
+#         print(x)
+#     # print(total)
+#     return total
+# # s1(4)
+# print(s1(4))
+def s1(a, b):
+    total = 1
+    for x in range(a,b+1):
+        total = total * (x)
+        print(x)
+    # print(total)
+    return total
+# s1(4)
+print(s1(2, 7))
 print('------------end------------')
