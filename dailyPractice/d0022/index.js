@@ -247,10 +247,6 @@ function Task13(s) {
 }
 console.log(Task13("abcdefg"))
 
-// U5 W2 P1 Task 1
-function U5W2P1_Task1(p, n, m){
-
-}
 
 console.log("--------------------------")
 console.log("Test End")
