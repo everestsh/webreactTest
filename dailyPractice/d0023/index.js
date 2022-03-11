@@ -2,6 +2,16 @@ console.log("Test")
 console.log("--------------------------")
 'use strict'
 // step 1
+function test1(arr, x) {
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] === x) return i
+  }
+}
+
+let arr = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
+x = 100
+console.log(test1(arr, x))
+
 // let text = "this is my text";
 // let newText = text.slice(-1);
 // console.log(text)
@@ -234,35 +244,38 @@ function Task17(p, n, m) {
 // console.log(U5W2P1_Task6(a, x))
 
 // U5 W2 P1 Task 7
-function U5W2P1_Task7(a, filter_list){
-  let arr = []
-  if(!filter_list[0]) return a
-  for(let j=0; j < filter_list.length; j++){
-    for(let i=0; i<a.length; i++){
+// function U5W2P1_Task7(a, filter_list){
+//   let arr = []
+//   if(!filter_list[0]) return a
+//   for(let j=0; j < filter_list.length; j++){
+//     for(let i=0; i<a.length; i++){
 
-        // console.log("a[",i, "] =", a[i], "filter_list[j] =", filter_list[j])
-        if(a[i] === filter_list[j]){
-          // i++
-          // j++
-          // continue
-          a.splice(i,1,"")
-        }else{
-          // console.log("#### a[",i, "] =filter_list[",j,"] =", a[i], filter_list[j])
-          // arr.push(a[i])
-        }
-        // console.log(a, a[i], filter_list[j])
-        // console.log("i =", i, "j =", j)
-    }
-    arr =  a.filter(item => { 
-      return item !== ''
-    })
-  }
-  return arr
-}
-let a, filter_list
-a = [1, 7, 2, 10, 7]
-filter_list =  []
-console.log(U5W2P1_Task7(a, filter_list ))
+//         // console.log("a[",i, "] =", a[i], "filter_list[j] =", filter_list[j])
+//         if(a[i] === filter_list[j]){
+//           // i++
+//           // j++
+//           // continue
+//           a.splice(i,1,"")
+//         }else{
+//           // console.log("#### a[",i, "] =filter_list[",j,"] =", a[i], filter_list[j])
+//           // arr.push(a[i])
+//         }
+//         // console.log(a, a[i], filter_list[j])
+//         // console.log("i =", i, "j =", j)
+//     }
+//     arr =  a.filter(item => { 
+//       return item !== ''
+//     })
+//   }
+//   return arr
+// }
+// let a, filter_list
+// a = [1, 7, 2, 10, 7]
+// filter_list =  [2, 7]
+// console.log(U5W2P1_Task7(a, filter_list ))
+
+
+
 
 console.log("--------------------------")
 console.log("Test End")
