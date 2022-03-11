@@ -167,18 +167,41 @@ print('----------start------------')
 # print(U5W2P1_Task5(a, b))
 
 
-# U5 W2 P1 Task 5
-def U5W2P1_Task6(a, x):
+# U5 W2 P1 Task 6
+# def U5W2P1_Task6(a, x):
+#     output = []
+#     # print(output)
+#     for i in range(len(a)):
+#         # print(i)
+#         if(a[i] != x ):
+#             output.append(a[i])
+#     return output
+
+# a = [1, 7, 2, 10, 7]
+# x = 7
+# print(U5W2P1_Task6(a, filter_list))
+
+
+# U5 W2 P1 Task 7
+def U5W2P1_Task7(a, filter_list):
     output = []
     # print(output)
-    for i in range(len(a)):
-        # print(i)
-        if(a[i] != x ):
-            output.append(a[i])
+    if(filter_list ==[]):
+        return a
+    for j in range(len(filter_list)):
+        for i in range(len(a)):
+            if(a[i] == filter_list[j] ):
+                a[i] = ''
+    for x in a:
+        if(x != ''):
+            output.append(x)
     return output
-
+    
 a = [1, 7, 2, 10, 7]
-x = 7
-print(U5W2P1_Task6(a, x))
+filter_list =  [2, 7]
+print(U5W2P1_Task7(a, filter_list))
+
+
+
 
 print('------------end------------')
