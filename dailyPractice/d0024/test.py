@@ -77,6 +77,7 @@ print('----------start------------')
 # print(50 % 25)
 # print(-6 % 3)
 
+
 # U5 W2 P1 Task 7
 # def U5W2P1_Task7(a, filter_list):
 #     output = []
@@ -98,19 +99,76 @@ print('----------start------------')
 
 
 # U5 W2 P1 Task 8
-def U5W2P1_Task8(n, m):
-    arr = []
+# def U5W2P1_Task8(n, m):
+#     arr = []
+#     output = []
+#     for x in range(n):
+#         for y in range(m):
+#             arr.append("A")
+#         output.append(''.join(arr))
+#         arr  = []
+#     return output
+# n = 3
+# m = 2
+# print(U5W2P1_Task8(n, m ))
+
+# U5 W2 P1 Task 9
+# def U5W2P1_Task9(elements):
+#     length = len(elements)
+#     # print(length)
+#     for i in range(length):
+#         count = 0
+#         # print(i)
+#         for j in range(length):
+#             # print(j)
+#             if(elements[j] == j+1):
+#                 count += 1
+#                 # print("#")
+#         if(count == length): return i
+#         elements.append(elements.pop(0))
+#     return -1
+        
+
+# # elements = [1, 4, 2, 3]
+# elements = [2, 3, 4, 1]
+# # elements = [1,2,3,4]
+# # elements = [3, 4, 5, 1, 2]
+
+# print( U5W2P1_Task9(elements) )
+
+
+# U5 W2 P1 Task 10
+def U5W2P1_Task10(digits):
+    
+    length  = len(digits)
+    arr = [] 
+    strArr = []
     output = []
-    for x in range(n):
-        for y in range(m):
-            arr.append("A")
-        output.append(''.join(arr))
-        arr  = []
+    # print(length)
+    for x in range(length):
+        arr.append(str(digits[x]))
+        # print( x )
+    # print( list(str(int(''.join(arr)) + 1)) )
+    strArr = list(str(int(''.join(arr)) + 1))
+    for n in strArr:
+        output.append( int(n) )
+        
+
+    # str = ''.join()
+    # print( o)
     return output
 
+# digits = [0,1,2,3]
+# digits = [0,1,2,0]
+digits = [9,9,9,9]
+# digits = [9,9,9,9.1]
+# digits = [9,9,9,undefined]
+# digits = [undefined,9,9,undefined]
+# digits = ['0']
+# digits = [0,0,0]
+# digits = [0,0,1]
+# digits = []
+print( U5W2P1_Task10(digits) )
 
-n = 3
-m = 2
-print(U5W2P1_Task8(n, m ))
 
 print('------------end------------')
