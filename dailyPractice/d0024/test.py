@@ -152,8 +152,6 @@ def U5W2P1_Task10(digits):
     strArr = list(str(int(''.join(arr)) + 1))
     for n in strArr:
         output.append( int(n) )
-        
-
     # str = ''.join()
     # print( o)
     return output
