@@ -229,7 +229,7 @@ function U5W2P1_Task10(digits){
 
   // console.log(digits[0])
   
-  if(digits[0] === undefined) return undefined
+  if(digits[0] === undefined) return -1
   for( let number of digits){
     // console.log(typeof(number) === "number")
     if((typeof(number) !== "number") || number%1 !== 0) return undefined
