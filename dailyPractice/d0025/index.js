@@ -49,28 +49,80 @@ console.log("--------------------------")
 // right = 1
 // console.log( U5Sprint2GCATest1 (numbers, left, right) )
 
-// Sprint 2 GCA Test 2
-function U5Sprint2GCATest2 (s){
-  let a = s
-  const output = []
-  let  newarr , arr
-  console.log(a)
-  for(let i=0; i< s.length; i++){
-    if(s === a.split('').reverse().join('')) {
-      output.unshift()
-    }
-    arr = a.split('')
-    newarr = arr.pop()
-    a = arr.join('')
-    console.log("a = ", a)
-    console.log(newarr)
-  }
-  return output.join('')
-}
+// // Sprint 2 GCA Test 2
+// function U5Sprint2GCATest2 (s){
+//   let a = s , b =''
+//   const length = s.length
+//   console.log("len = ", length)
+//   // console.log("a = ", a)
+//   const output = []
+//   let  btmp , arr
+//   // console.log(a)
+//   if(length < 2) return  "result --- "
+//   for(let i=length; i>0; i--){
+    
+//     console.log("1 ", i, a, b)
+//     // if(a.length===2 && a === a.split('').reverse().join('') ){
+//     //   return  "result --- "
+//     // }else{
+//     //   return "result --- " + a
+//     // }
+//     if(a === a.split('').reverse().join('')) {
+//       console.log("########  2", output)
+//       aLen = a.length
+//       if(a.length === 1) return  "result --- " + a
+//       if(a.length === 2) {
+//         i = i - 2
+//         continue
+//       }
+//       if(i === 0 ) return output.join('')
+//       i = output.length
+//       b = output.join('')
+//       a = b
+//       b = ''
+//       for(let j=0; i < output.length; j++){
+//         output.pop()
+//       }
 
-let s
-s = "abbaabbaabbac"
-console.log( U5Sprint2GCATest2(s) )
+
+//       // i = length - a.length
+//       console.log("######## shenxia i = ", i, aLen)
+//       // if(i === length) {
+//       //   console.log("i= ", i, a)
+//       //   return "ok"
+//       // }
+      
+//       // console.log("in a = ", a) 
+//       continue;
+//     }else{
+//       if(length < 2) return  "result --- ";
+//       if(length === 2) { return  "result - n-- " + a ; }
+
+//       arr = a.split('')
+//       btmp = arr.pop()
+//       output.unshift(btmp) 
+//       console.log("output = ",output.join(''), "i =",i)
+//       a = arr.join('')
+//       b = output.join('')
+//       // console.log("end a = ", a)
+//     }
+//   }
+//   return "result --- " +output.join('')
+// }
+ 
+// let s
+// // s = "abbaabbaabba"
+// // s = "abbaabbaabbac"
+// // s = "abbaabbaabbacb"  // ok cb
+// s = "abbaabbaabbacbb"
+// // s = "abbaabbaabbacbbce"
+// // s = "a"
+// // s = "aa"
+// //  s = "ab"
+// //  s = "aab"
+// //  s = "abab"
+// //  s = "abbab"
+// console.log( U5Sprint2GCATest2(s) )
 
 
 // step sTest 2 ############################################
@@ -101,13 +153,19 @@ console.log( U5Sprint2GCATest2(s) )
 // step sTest 2 ############################################
 
 
-
 //  diffMaxMin
 
 
 
-// U5 W2 P1 Task 10
-// function U5W2P1_Task10(digits){
- 
+// U5 W2 P1 Task 11
+function U5W2P1_Task11(a, b){
+    console.log()
+}
+let a , b ;
+a = "1001";
+b = '11';
+
+console.log(U5W2P1_Task11(a,b))
+
 console.log("--------------------------")
 console.log("Test End")
