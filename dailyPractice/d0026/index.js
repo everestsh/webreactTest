@@ -34,7 +34,7 @@ console.log("--------------------------")
 
 
 // U5 W2 P1 Task 2
-function U5W1D5_Test2(text, letters){
+function U5W1D5_Test12(text, letters){
     
 }
 let text, letters

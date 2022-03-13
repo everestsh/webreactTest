@@ -4,6 +4,12 @@ console.log("--------------------------")
 // step sTest 1
 
 // console.log("--------------------------")
+// function nameString(name){
+// 	var b = "Edabit"
+// 	var result = name + b
+//   	return result
+// }
+// console.log(nameString("lknknl"))
 
 // step sTest 1 ############################################
 // function solution(numbers, left, right) {
@@ -152,20 +158,169 @@ console.log("--------------------------")
 // Click the "Run Tests" button to see output and console logs.
 // step sTest 2 ############################################
 
-
 //  diffMaxMin
+// function Task1(a, b){
+//     // w 1
+//     let j = 8
+//     console.log(a.charAt(5))
+//     for(let i=5; i > 0; i--){
+//        console.log( typeof (a.charAt(j--) - "0")  )
+//     }
+//     console.log("Test")
+//     // return 5-'1'  // 4 number
+//     // return 5+'1'  // 51  string
+//     // return 1 % 3 // 1
+//     return 3 % 4 // 3
+// }
+// let a , b ;
+// a = "12345678";
+// b = '11';
+
+// console.log(Task1(a,b))
+//  Task11
+// function Task2(a, b){
+//     // w 2
+//     let i = a.length - 1
+//     let j = b.length - 1
+
+//     while(i >=0){
+//         console.log("i = ", i, "a = ", a.charAt(i--))
+//     }
+//     console.log("###")
+//     while(j>=0){
+//         console.log("j = ", j, "a = ", b.charAt(j--))
+//     }
+//     return 5+'1'  // 51  string
+// }
+// let a , b ;
+// a = "12345678";
+// b = '11';
+// console.log(Task2(a,b))
+
+//  Task3
+// function Task3(a, b){
+//     // w 3
+//     let i = a.length - 1
+//     let j = b.length - 1
+
+//     let digitA 
+//     console.log("# ", digitA = i >= 0)
+//     console.log("# ", "-1"-0)
+//     console.log("# ", typeof(""-0) )
+//     // while(i >=0){
+//     //     console.log("i = ", i, "a = ", a.charAt(i--))
+//     // }
+//     // console.log("###")
+//     // while(j>=0){
+//     //     console.log("j = ", j, "a = ", b.charAt(j--))
+//     // }
+//     // return 5+'1'  // 51  string
+//     // return 5-'1'  // 4  string
+//     return '5'-'1'  // 4  string
+// }
+// let a , b ;
+// a = "12345678";
+// b = '11';
+// console.log(Task3(a,b))
 
 
 
 // U5 W2 P1 Task 11
+// function U5W2P1_Task11(n){
+//     let sum  = 0
+//     for(let i =0; i<n; i++){
+//         // console.log(n)
+//         sum = sum  + i*4
+//     }
+//     return 1+sum
+// }
+// let n
+// n = 1
+// console.log(U5W2P1_Task11(n))
+// console.log(U5W2P1_Task11(1))
+// console.log(U5W2P1_Task11(2))
+// console.log(U5W2P1_Task11(3))
+// console.log(U5W2P1_Task11(4))
+// console.log(U5W2P1_Task11(5))
+// console.log(U5W2P1_Task11(6))
+
+// function makesTen(a, b) {
+// 	let arr = [a,b]
+// 	for(let i=0; i<arr.length; i++){
+// 		if(arr[i] == 10){
+// 			return true
+// 		}
+// 	}
+// 	if(10 ===a+b){
+// 		return true
+// 	} else{
+// 		return false	
+// 	}
+// }
+// console.log(makesTen(9, 10))
+
+
+
+// for(let i=1; i<5; i++){
+//     console.log(U5W2P1_Task11(i))
+// }
+// U5 W2 P1 Task 11
 function U5W2P1_Task11(a, b){
-    console.log()
+    let result = ''
+    let i = a.length - 1
+    let j = b.length - 1
+    let carry = 0
+
+    while(i >=0 || j>=0){
+        // console.log("i = ", i, "a = ", a.charAt(i--))
+        // console.log("j = ", j, "a = ", b.charAt(j--))
+        let digitA = i >= 0? a.charAt(i--)- "0" : 0;
+        let digitB = j >= 0? b.charAt(j--)- "0" : 0;
+
+        sum = digitA + digitB + carry
+        if(sum >= 2) {
+            carry = 1;
+            sum -= 2;
+        }else{
+            carry = 0;
+        }
+        result = sum + result
+    }
+    console.log(carry)
+    // while(j>=0){
+    if(carry==1){
+        result = '1' + result
+    }
+    // }
+    return result
+    // return 5+'1'  // 51  string
 }
 let a , b ;
-a = "1001";
+a = "1111";
 b = '11';
 
 console.log(U5W2P1_Task11(a,b))
+
+//  U5W2P1_Task1112
+// function U5W2P1_Task12(arr){
+//     let  output = []
+//     for(let i=0; i<arr.length-2; i++){
+//             // console.log(i, arr[i], arr[i+1], arr[i+2])
+//             if(    ( arr[i]+arr[i+1] > arr[i+2] ) 
+//                 && ( arr[i]+arr[i+2] > arr[i+1] )
+//                 && ( arr[i+1]+arr[i+2] > arr[i] ) ){
+//                 console.log("true")
+//                 output.push(1)
+//             }else{
+//                 output.push(0)
+//             }
+//     }
+//     return output
+// }
+// let arr = []
+// arr = [1, 2, 2, 4]
+
+// console.log(U5W2P1_Task12(arr))
 
 console.log("--------------------------")
 console.log("Test End")
