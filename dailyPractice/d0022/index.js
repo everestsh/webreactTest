@@ -2,19 +2,19 @@ console.log("Test")
 console.log("--------------------------")
 'use strict'
 // step 1
-// const a  = [1,2,3,4,5,6]
-// // const b = a
+const a  = [1,2,3,4,5,6]
+const b = a
 // const b = [...a]
-// console.log("a =",a)
-// console.log("b =",b)
+console.log("a =",a)
+console.log("b =",b)
 
-// function changeIndexOne(array){
-//   array[1] = 7
-// }
+function changeIndexOne(array){
+  array[1] = 7
+}
 
-// changeIndexOne(a)
-// console.log("a =",a)
-// console.log("b =",b)
+changeIndexOne(a)
+console.log("a =",a)
+console.log("b =",b)
 // let one = 1;
 
 // const objA = {
@@ -228,24 +228,24 @@ console.log("--------------------------")
 // console.log(Task11(3,5))
 
 // P4 Task 13
-function Task13(s) {
-  let arr = [], a = [], b = []
-  if(!s) return ''
-  arr = s.split('')
-  console.log(arr)
-  for(let i =0; i<= arr.length; i++){
-      if(i%2 === 0){
-          b.push(arr[i])
-          console.log(i)
-      }else  {
-        // a.push(arr[i])
-        // console.log(i)
-      }
-      // if(i%2)
-  }
-  return b.join("")
-}
-console.log(Task13("abcdefg"))
+// function Task13(s) {
+//   let arr = [], a = [], b = []
+//   if(!s) return ''
+//   arr = s.split('')
+//   console.log(arr)
+//   for(let i =0; i<= arr.length; i++){
+//       if(i%2 === 0){
+//           b.push(arr[i])
+//           console.log(i)
+//       }else  {
+//         // a.push(arr[i])
+//         // console.log(i)
+//       }
+//       // if(i%2)
+//   }
+//   return b.join("")
+// }
+// console.log(Task13("abcdefg"))
 
 
 console.log("--------------------------")
