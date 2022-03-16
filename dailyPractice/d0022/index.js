@@ -34,6 +34,8 @@ console.log("b =",b)
 // console.log("objA =",objA)
 // console.log("objB =",objB)
 
+
+
 // step 2
 // let v = null // false
 // let v = ''   //false

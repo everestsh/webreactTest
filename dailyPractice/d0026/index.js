@@ -5,7 +5,85 @@ console.log("--------------------------")
 
 // console.log("--------------------------")
 
+// // step sTest 1 ############################################
+// function sTest(a, b, c) {
+//     const arr = [a, b, c]
+//     // let larger = -Number.MAX_VALUE
+//     let larger = -Number.MAX_SAFE_INTEGER
+//     console.log(larger)
+//     for(let i=0; i<arr.length; i++){
+//         console.log(arr[i])
+//         if(larger < arr[i]){
+//             larger = arr[i]
+//             console.log("#",larger)
+//         }
+//     }
+//     return larger
+// }
+// let a, b, c
+// a = 33
+// b = 71
+// c =5426
+// console.log(sTest(a,b,c))
+
 // step sTest 1 ############################################
+// function sTest1(a, b, c) {
+//     return (a > b) && (b <= c) && (a*3 > c || c<=a) ? "OK" : "NOK"
+// }
+// let a, b, c
+// // a = 728
+// // b = 627
+// // c = 4
+// a = 130
+// b = -91
+// c = 215
+// console.log(sTest1(a,b,c))
+// step sTest 2 ############################################
+// function sTest2(n) {
+//     let sum = 1
+//     while(n>1){
+//         sum = sum * n
+//         console.log(n)
+//         n--
+//     }
+//     return sum
+// }
+// let n
+// n  = 3
+// console.log("# ", sTest2(n))
+
+// step sTest 2 ############################################
+// function sTest2(n,m) {
+//     let sum = 1
+//     while(m>=n){
+//         sum = sum * m
+//         console.log(m)
+//         m--
+//     }
+//     return sum
+// }
+// let n, m
+// n = 2
+// m = 7
+// console.log("# ", sTest2(n, m))
+
+// step sTest 3 ############################################
+// function sTest3(s,n) {
+//     return s[n]
+// }
+// let s, n
+// s = "abcdef"
+// n = 2
+// console.log("# ", sTest3(s, n))
+
+// step sTest 3 ############################################
+function sTest3(s,n) {
+
+}
+let s, n
+s = "abcdef"
+n = 2
+console.log("# ", sTest3(s, n))
 
 
 // U5 W2 P1 Task 1
@@ -100,36 +178,48 @@ console.log("--------------------------")
 
 // Make Array almostIncreasingSequence 
 function MAC_Test2(sequence){
-    let length = sequence.length
-    const output = []
+    // Way 1
+    // let length = sequence.length
+    // const output = []
 
-    // console.log(sequence.sort())
-    if(length === 2) return true 
-    for(let i=0; i<length; i++){
-        const temp = [...sequence]
-        temp.splice(i,1)
-        // console.log(temp)
-        // console.log(i)
-        for(let j=1; j<length-1; j++ ){
-            // console.log(sequence[j])
-            if(temp[j-1]>=temp[j]) {
-                // console.log(i)
-                // console.log(i, temp[j])
-                // output.push(false)
-                output.splice(i,1, false)
-                j = length-1
-                break
-            }else{
-                output.splice(i,1, true) 
-            }
+    // // console.log(sequence.sort())
+    // if(length === 2) return true 
+    // for(let i=0; i<length; i++){
+    //     const temp = [...sequence]
+    //     temp.splice(i,1)
+    //     // console.log(temp)
+    //     // console.log(i)
+    //     for(let j=1; j<length-1; j++ ){
+    //         // console.log(sequence[j])
+    //         if(temp[j-1]>=temp[j]) {
+    //             // console.log(i)
+    //             // console.log(i, temp[j])
+    //             // output.push(false)
+    //             output.splice(i,1, false)
+    //             j = length-1
+    //             break
+    //         }else{
+    //             output.splice(i,1, true) 
+    //         }
+    //     }
+    //     // output.push(true)
+    // }
+    // for(let i=0; i< output.length; i++){
+    //     if(output[i]===true) return true
+    // }
+    // return false
+
+    // Way 2
+    let invalidItemsCount = 0;
+    for (let i = 1; i < sequence.length; i++) {
+        if (sequence[i] <= sequence[i-1]) {
+        invalidItemsCount++;
+        if (invalidItemsCount > 1) return false;
+        if (sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]) return false;
         }
-        // output.push(true)
-
     }
-    for(let i=0; i< output.length; i++){
-        if(output[i]===true) return true
-    }
-    return false
+  
+    return true;
 }
 let sequence
 // sequence = [1, 1]
