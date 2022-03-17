@@ -16,6 +16,7 @@ print('----------start------------')
 # print( U5W2P1_Task12(arr) )
 # ################################
 
+
 # ################################
 # ################################
 
@@ -39,9 +40,27 @@ print(operator.eq("hello","name"))
 print(operator.eq("hello","hello"))
 
 
+
+# 1.str >>>list 
 str1 = "12345"
 list1 = list(str1)
 print(list1)
 
+str2 = "123 sjhid dhi"
+list2 = str2.split() #or list2 = str2.split(" ")
+print(list2)
+
+
+str3 = "www.google.com"
+list3 = str3.split(".")
+print(list3)
+
+# 3.list >>>str
+str4 = "".join(list3)
+print(str4)
+str5 = ".".join(list3)
+print(str5)
+str6 = " ".join(list3)
+print(str6)
 
 print('------------end------------')
