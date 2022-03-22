@@ -217,50 +217,7 @@ console.log("--------------------------")
 // // m = [1, 2, 3, 4]
 // console.log(U5W2P1_Task9(elements ))
 
-// U5 W2 P1 Task 10
-function U5W2P1_Task10(digits){
-  // console.log(Number(digits.join('')))
-  let num = ''
-  for(let i=0; i<digits.length; i++){
-    num = num + digits[i]
-  }
-  console.log(num)
-  // console.log( Number(digits.join(''))+1 )
 
-  // console.log(digits[0])
-  
-  if(digits[0] === undefined) return -1
-  for( let number of digits){
-    // console.log(typeof(number) === "number")
-    if((typeof(number) !== "number") || number%1 !== 0) return undefined
-  }
-  let arr = String(Number(num)+1).split('')
-  // let arr = String(Number(digits.join(''))+1).split('')
-  // console.log(arr)
-  return arr.map( item => Number(item))
-}
-
-function solution(digits) {
-  if(digits[0] === undefined) return undefined
-  for( let number of digits){
-      // console.log(typeof(number) === "number")
-      if((typeof(number) !== "number") || number%1 !== 0) return undefined
-  }
-  let arr = String(Number(digits.join(''))+1).split('')
-  return arr.map( item => Number(item))
-}
-let digits
-// digits = [0,1,2,3]
-// digits = [0,1,2,0]
-digits = [9,9,9,9]
-// digits = [9,9,9,9.1]
-// digits = [9,9,9,undefined]
-// digits = [undefined,9,9,undefined]
-// digits = [0]
-// digits = [0,0,0]
-// digits = [0,0,1]
-// digits = []
-console.log( U5W2P1_Task10(digits) )
 
 console.log("--------------------------")
 console.log("Test End")
