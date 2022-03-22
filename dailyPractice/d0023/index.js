@@ -2,15 +2,15 @@ console.log("Test")
 console.log("--------------------------")
 'use strict'
 // step 1
-function test1(arr, x) {
-  for(let i=0; i<arr.length; i++){
-    if(arr[i] === x) return i
-  }
-}
+// function test1(arr, x) {
+//   for(let i=0; i<arr.length; i++){
+//     if(arr[i] === x) return i
+//   }
+// }
 
-let arr = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
-x = 100
-console.log(test1(arr, x))
+// let arr = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
+// x = 100
+// console.log(test1(arr, x))
 
 // let text = "this is my text";
 // let newText = text.slice(-1);
@@ -125,11 +125,11 @@ function Task17(p, n, m) {
   return arr.join('')
 }
 
-// let p, n, m
-// p = 2 
-// n = 1 
-// m = 2
-// console.log(Task17(p, n, m))
+let p, n, m
+p = 2 
+n = 1 
+m = 2
+console.log(Task17(p, n, m))
 
 // // U5 W2 P1 Task 1
 // function U5W2P1_Task1(p, n, m){
