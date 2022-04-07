@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# print('----------start------------')
 
 # # Step 1 is_equal
 # ################################
@@ -21,13 +21,7 @@
 # ################################
 
 
-
-def solution(inputString):
-    return inputString[::-1] == inputString
-
+print('------------end------------')
 
 if __name__ == "__main__":
-    print('----------start------------')
-    print(solution("aabaa"))
     print("hello world")
-    print('------------end------------')
