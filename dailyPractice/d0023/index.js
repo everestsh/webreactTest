@@ -38,28 +38,28 @@ console.log("--------------------------")
 // console.log(Task13("abcdefg"))
 
 // // P4 Task 14
-// function Task14(s) {
-//   let arr = [], output = []
-//   let vowels = ['a', 'e', 'i', 'o', 'u']
-//   // console.log(s)
-//   arr = s.split('')
-//   for(let i=0; i<arr.length; i++){
-//     if(i%2 === 0){
-//       // console.log(vowels.indexOf(arr[i]))
-//       if( vowels.indexOf(arr[i]) != -1 ){
-//         // console.log("--- ",arr[i])
-//         continue;
-//       }else {
-//         output.push(arr[i])
-//       }
-//     }
-//   }
-//   return output.join('')
-// }
-// let s
-// // s = "abcd"
-// s = "abcdefg"
-// console.log(Task14(s))
+function Task14(s) {
+  let arr = [], output = []
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  // console.log(s)
+  arr = s.split('')
+  for(let i=0; i<arr.length; i++){
+    if(i%2 === 0){
+      // console.log(vowels.indexOf(arr[i]))
+      if( vowels.indexOf(arr[i]) != -1 ){
+        // console.log("--- ",arr[i])
+        continue;
+      }else {
+        output.push(arr[i])
+      }
+    }
+  }
+  return output.join('')
+}
+let s
+// s = "abcd"
+s = "abcdefg"
+console.log(Task14(s))
 
 // // P4 Task 15
 // function Task15(s) {
